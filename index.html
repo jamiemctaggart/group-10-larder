@@ -9,16 +9,16 @@
 
   <ons-page>
     <ons-toolbar>
-      <div class="center">Tab 1</div>
+      <div class="center">Checklist</div>
     </ons-toolbar>
 
     <!-- this is the tab bar -->
     <ons-tabbar swipeable position="auto">
-      <ons-tab page="tab1.html" label="Tab 1" icon="ion-home, material:md-home" badge="7" active>
+      <ons-tab page="tab1.html" label="Checklist" icon="ion-home, material:md-home" badge="7" active>
       </ons-tab>
-      <ons-tab page="tab2.html" label="Tab 2" icon="md-settings" active-icon="md-face">
+      <ons-tab page="tab2.html" label="Statistics" icon="md-settings" active-icon="md-face">
       </ons-tab>
-      <ons-tab page="tab3.html" label="Tab 3" icon="md-settings" active-icon="md-face">
+      <ons-tab page="tab3.html" label="About Us" icon="md-settings" active-icon="md-face">
       </ons-tab>
     </ons-tabbar>
   </ons-page>
@@ -27,7 +27,7 @@
   <template id="tab1.html">
     <ons-page id="Tab1">
       <p style="text-align: center;">
-        This is the first page.
+        Tap the items that you have completed.
       </p>
       <ons-list>
         <ons-list-item tappable>
@@ -118,17 +118,23 @@
   <template id="tab2.html">
     <ons-page id="Tab2">
       <p style="text-align: center;">
-        This is the second page.
+        This is the statistics if everyone in dundee was able to check those
+        same items off the list
       </p>
+      <!-- Jamie is working on the javascript for this -->
     </ons-page>
   </template>
 
   <!-- This is a tab -->
   <template id="tab3.html">
     <ons-page id="Tab3">
+      <!-- TODO Add info for about us -->
       <p style="text-align: center;">
-        This is the third page.
+        about us
       </p>
+      <!-- TODO Add facebook API to show little green larders posts -->
+
+      <!-- TODO Add a map API to show the shops location --> 
     </ons-page>
   </template>
 
