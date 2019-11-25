@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
 </head>
+
 <body>
+
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0"></script>
 
   <ons-page>
     <ons-toolbar>
@@ -27,7 +32,10 @@
         about us
       </p>
       <!-- TODO Add facebook API to show little green larders posts -->
-
+      <div class="fb-page" data-href="https://www.facebook.com/thelittlegreenlarder/" data-tabs="timeline, events, messages" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+        data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/thelittlegreenlarder/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/thelittlegreenlarder/">The Little Green Larder</a></blockquote>
+      </div>
       <!-- TODO Add a map API to show the shops location -->
     </ons-page>
   </template>
@@ -35,4 +43,5 @@
 
   <script type="text/javascript" src="code/onsen.js"></script>
 </body>
+
 </html>
