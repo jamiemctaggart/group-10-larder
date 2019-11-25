@@ -12,3 +12,9 @@ body {
 #fbpage-container{
   text-align: center;
 }
+
+#map-container{
+  width: 340px;
+  height: 300px;
+  margin: auto;
+}
