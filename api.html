@@ -6,6 +6,10 @@
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
 
+  <!-- implement mapbox api -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
   <link rel="stylesheet" href="css/master.css">
 
 </head>
@@ -32,7 +36,7 @@
     <ons-page id="Tab3">
       <!-- TODO Add info for about us -->
       <p style="text-align: center;">
-        about us
+        About Us
       </p>
       <!-- TODO Add facebook API to show little green larders posts -->
       <div id="fbpage-container">
@@ -43,6 +47,16 @@
         </div>
       </div>
       <!-- TODO Add a map API to show the shops location -->
+      <div id="map-container">
+        <div id='map' style='width: 340px; height: 300px;'></div>
+        <script>
+          mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dC1iYWluIiwiYSI6ImNrM2VydjduZzAxYW8zb2w2YWpzMHVjeXEifQ.TeD601FJ2Yxys-IIWzPKrQ';
+          var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11'
+          });
+        </script>
+      </div>
     </ons-page>
   </template>
 
