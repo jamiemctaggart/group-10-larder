@@ -35,11 +35,13 @@
   <template id="tab3.html">
     <ons-page id="Tab3">
       <!-- TODO Add info for about us -->
-      <p style="text-align: center;">
+      <h1>
         About Us
-      </p>
+      </h1>
       <!-- facebook API to show little green larders posts -->
+
       <div id="fbpage-container">
+        <p>Why not check us out on Facebook:</p>
         <div class="fb-page" data-href="https://www.facebook.com/thelittlegreenlarder/" data-tabs="timeline, events, messages" data-width="340" data-height="500" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false"
           data-show-facepile="true">
           <blockquote cite="https://www.facebook.com/thelittlegreenlarder/" class="fb-xfbml-parse-ignore">
@@ -49,6 +51,7 @@
       </div>
       <!-- map API to show the shops location -->
       <div id="map-container">
+      <p>Here's where you can find us:</p>
         <div id='map' style='width: 340px; height: 300px;'></div>
         <script>
           mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dC1iYWluIiwiYSI6ImNrM2VydjduZzAxYW8zb2w2YWpzMHVjeXEifQ.TeD601FJ2Yxys-IIWzPKrQ';

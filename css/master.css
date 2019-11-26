@@ -9,8 +9,13 @@ body {
   margin: 0 auto;
 }
 
-#fbpage-container{
+h1{
   text-align: center;
+}
+
+#fbpage-container{
+  width: 340px;
+  margin: auto;
 }
 
 #map-container{
