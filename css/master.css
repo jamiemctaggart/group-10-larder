@@ -5,6 +5,21 @@
 }
 
 body {
-  max-width: 960px;
+  /* max-width: 960px; */
   margin: 0 auto;
+}
+
+h1{
+  text-align: center;
+}
+
+#fbpage-container{
+  width: 340px;
+  margin: auto;
+}
+
+#map-container{
+  width: 340px;
+  height: 300px;
+  margin: auto;
 }
