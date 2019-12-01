@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
@@ -128,7 +129,8 @@
       </p>
       <!-- Jamie is working on the javascript for this -->
       <ons-button onclick="showResult();" modifier="large" ripple="true">Calculate Savings</ons-button>
-      <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+      <!-- TODO REMOVE <div id="chartContainer" style="height: 300px; width: 100%;"></div>-->
+      <div id="piechart" style="width: 900px; height: 500px;"></div>
       <!-- These items are accesed through statistics.js and will show facts-->
       <p id="checklist-item-1"></p>
       <p id="checklist-item-2"></p>
@@ -207,7 +209,7 @@
     </div>
   </ons-page>
 </template>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<!-- TODO REMOVE <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>-->
 <script src="code/statistics.js"></script>
 <script type="text/javascript" src="code/onsen.js"></script>
 </body>

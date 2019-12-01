@@ -1,7 +1,24 @@
-var checklist = [false, false, false, false, false, false, false, false, false, false];
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
 
+
+var checklist = [false, false, false, false, false, false, false, false, false, false];
 var greenChoices = 0;
 var badChoices = 10;
+
+
+function drawChart() {
+	var data = google.visualization.arrayToDataTable([
+		['Score', 'Percentage'],
+		['Zero-waste score', greenChoices],
+		['Wastefulness', badChoices]
+	]);
+	var options = {
+		title: 'My Daily Activities'
+	};
+	var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+	chart.draw(data, options);
+}
 
 function chart(){
 	var chart = new CanvasJS.Chart("chartContainer", {
@@ -27,7 +44,8 @@ function chart(){
 }
 
 function showResult() {
-	chart();
+	drawChart();
+
 
 	if (checklist[2]) {
 		var toothbrushesPerYear = 6;
