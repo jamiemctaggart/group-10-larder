@@ -1,3 +1,6 @@
+var checklist = [false, false, false, false, false, false, false, false, false, false];
+
+
 function showResult() {
 	var chart = new CanvasJS.Chart("chartContainer", {
 		animationEnabled: true,
@@ -20,4 +23,14 @@ function showResult() {
 
 	chart.render();
 
+}
+
+var run = true;
+
+function toggleCheck(change) {
+	run = !run;
+	if (!run)
+		return;
+	checklist[change] = !checklist[change];
+	alert(checklist[change]);
 }
