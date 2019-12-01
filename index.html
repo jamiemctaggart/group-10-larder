@@ -119,13 +119,18 @@
   </template>
 
   <!-- This is a tab -->
-  <template id="tab2.html">
+  <template id="tab2.html" onpageshow="showResults()">
     <ons-page id="Tab2">
       <p style="text-align: center;">
         This is the statistics if everyone in dundee was able to check those
         same items off the list
       </p>
       <!-- Jamie is working on the javascript for this -->
+
+      <script>showResult()</script>
+      <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+
     </ons-page>
   </template>
 
@@ -192,8 +197,8 @@
       </div>
     </ons-page>
   </template>
-
-
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="code/statistics.js"></script>
   <script type="text/javascript" src="code/onsen.js"></script>
 </body>
 </html>
