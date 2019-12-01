@@ -14,33 +14,10 @@ function drawChart() {
 		['Wastefulness', badChoices]
 	]);
 	var options = {
-		title: 'My Daily Activities'
+		title: 'Eco Score'
 	};
 	var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 	chart.draw(data, options);
-}
-
-function chart(){
-	var chart = new CanvasJS.Chart("chartContainer", {
-		animationEnabled: true,
-		title: {
-			text: "Your score"
-		},
-		data: [{
-			type: "pie",
-			startAngle: 270,
-			yValueFormatString: "##0.00\"%\"",
-			indexLabel: "{label} {y}",
-
-
-			dataPoints: [
-				{y: greenChoices*10, label: "Zero-waste score",color: "green"},
-				{y: badChoices*10, label: "Wastefulness" , color: "blue"},
-			]
-		}]
-	});
-
-	chart.render();
 }
 
 function showResult() {
