@@ -3,8 +3,7 @@ var checklist = [false, false, false, false, false, false, false, false, false, 
 var greenChoices = 0;
 var badChoices = 10;
 
-
-function showResult() {
+function chart(){
 	var chart = new CanvasJS.Chart("chartContainer", {
 		animationEnabled: true,
 		title: {
@@ -25,7 +24,18 @@ function showResult() {
 	});
 
 	chart.render();
+}
 
+function showResult() {
+	chart();
+
+	if (checklist[2]) {
+		var toothbrushesPerYear = 6;
+		var populationOfDundee = 150000;//Aproximately
+		var dundeeToothbrushesPerYear = populationOfDundee * toothbrushesPerYear;
+		document.getElementById('checklist-item-'+(2+1)).innerHTML = "If everyone in dundee used Bamboo toothbrushes, it would save aproximately "+dundeeToothbrushesPerYear+
+		" plastic toothbrushes per year, as plastic toothbrushes can't biodegrade, and require petrolium to be made";
+	}
 }
 
 var run = true;
