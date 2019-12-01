@@ -25,6 +25,10 @@ function showResult() {
 
 }
 
+function calculatedSavings() {
+
+}
+
 var run = true;
 
 function toggleCheck(change) {
@@ -32,5 +36,4 @@ function toggleCheck(change) {
 	if (!run)
 		return;
 	checklist[change] = !checklist[change];
-	alert(checklist[change]);
 }
