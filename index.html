@@ -120,15 +120,14 @@
   </template>
 
   <!-- This is a tab -->
-  <template id="tab2.html" onpageshow="showResults()">
+  <template id="tab2.html">
     <ons-page id="Tab2">
       <p style="text-align: center;">
         This is the statistics if everyone in dundee was able to check those
         same items off the list
       </p>
       <!-- Jamie is working on the javascript for this -->
-      <script>showResult()</script>
-      <script>calculatedSavings()</script>
+      <button onclick="showResult();">Calculate Savings</button>
       <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 
 

@@ -1,5 +1,8 @@
 var checklist = [false, false, false, false, false, false, false, false, false, false];
 
+var greenChoices = 0;
+var badChoices = 10;
+
 
 function showResult() {
 	var chart = new CanvasJS.Chart("chartContainer", {
@@ -15,17 +18,13 @@ function showResult() {
 
 
 			dataPoints: [
-				{y: 80, label: "Zero-waste score",color: "green"},
-				{y: 20, label: "Wastefulness" , color: "blue"},
+				{y: greenChoices*10, label: "Zero-waste score",color: "green"},
+				{y: badChoices*10, label: "Wastefulness" , color: "blue"},
 			]
 		}]
 	});
 
 	chart.render();
-
-}
-
-function calculatedSavings() {
 
 }
 
@@ -36,4 +35,8 @@ function toggleCheck(change) {
 	if (!run)
 		return;
 	checklist[change] = !checklist[change];
+	if (checklist[change]){
+		greenChoices++;
+		badChoices--;
+	}
 }
