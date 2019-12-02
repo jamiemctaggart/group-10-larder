@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="css/master.css">
+  <meta charset="UTF-8">
 </head>
 <body>
   <div id="fb-root"></div>
@@ -34,7 +36,7 @@
         Tap the items that you have completed.
       </p>
       <ons-list>
-        <ons-list-item tappable>
+        <ons-list-item onclick="toggleCheck(0);" tappable>
           <label class="left">
             <ons-checkbox input-id="check-1"></ons-checkbox>
           </label>
@@ -42,7 +44,7 @@
             Shop at zero waste shops
           </label>
         </ons-list-item>
-        <ons-list-item tappable>
+        <ons-list-item onclick="toggleCheck(1);" tappable>
           <label class="left">
             <ons-checkbox input-id="check-2"></ons-checkbox>
           </label>
@@ -50,7 +52,7 @@
             Buy fruit and veg with no plastic
           </label>
         </ons-list-item>
-        <ons-list-item tappable>
+        <ons-list-item onclick="toggleCheck(2);" tappable>
           <label class="left">
             <ons-checkbox input-id="check-3"></ons-checkbox>
           </label>
@@ -58,7 +60,7 @@
             Bamboo toothbrushes
           </label>
         </ons-list-item>
-        <ons-list-item tappable>
+        <ons-list-item onclick="toggleCheck(3);" tappable>
           <label class="left">
             <ons-checkbox input-id="check-4"></ons-checkbox>
           </label>
@@ -66,7 +68,7 @@
             Bamboo cutlery
           </label>
         </ons-list-item>
-        <ons-list-item tappable>
+        <ons-list-item onclick="toggleCheck(4);" tappable>
           <label class="left">
             <ons-checkbox input-id="check-5"></ons-checkbox>
           </label>
@@ -74,7 +76,7 @@
             Recycle
           </label>
         </ons-list-item>
-        <ons-list-item tappable>
+        <ons-list-item onclick="toggleCheck(5);" tappable>
           <label class="left">
             <ons-checkbox input-id="check-6"></ons-checkbox>
           </label>
@@ -82,7 +84,7 @@
             Reusable straws
           </label>
         </ons-list-item>
-        <ons-list-item tappable>
+        <ons-list-item onclick="toggleCheck(6);" tappable>
           <label class="left">
             <ons-checkbox input-id="check-7"></ons-checkbox>
           </label>
@@ -90,7 +92,7 @@
             Bars of soap rather than plastic bottles
           </label>
         </ons-list-item>
-        <ons-list-item tappable>
+        <ons-list-item onclick="toggleCheck(7);" tappable>
           <label class="left">
             <ons-checkbox input-id="check-8"></ons-checkbox>
           </label>
@@ -98,7 +100,7 @@
             Reduce food waste, reuse leftovers
           </label>
         </ons-list-item>
-        <ons-list-item tappable>
+        <ons-list-item onclick="toggleCheck(8);" tappable>
           <label class="left">
             <ons-checkbox input-id="check-9"></ons-checkbox>
           </label>
@@ -106,7 +108,7 @@
             Making food from scratch
           </label>
         </ons-list-item>
-        <ons-list-item tappable>
+        <ons-list-item onclick="toggleCheck(9);" tappable>
           <label class="left">
             <ons-checkbox input-id="check-10"></ons-checkbox>
           </label>
@@ -149,6 +151,21 @@
         This is the statistics if everyone in dundee was able to check those
         same items off the list
       </p>
+      <!-- Jamie is working on the javascript for this -->
+      <ons-button onclick="showResult();" modifier="large" ripple="true">Calculate Savings</ons-button>
+      <div id="piechart" style="width: 900px; height: 500px;"></div>
+      <!-- These items are accesed through statistics.js and will show facts-->
+      <p id="checklist-item-1"></p>
+      <p id="checklist-item-2"></p>
+      <p id="checklist-item-3"></p>
+      <p id="checklist-item-4"></p>
+      <p id="checklist-item-5"></p>
+      <p id="checklist-item-6"></p>
+      <p id="checklist-item-7"></p>
+      <p id="checklist-item-8"></p>
+      <p id="checklist-item-9"></p>
+      <p id="checklist-item-10"></p>
+
      <!-- displays statistics to the user of result of a whole city carrying out the same choices --> 
     </ons-page>
   </template>
@@ -165,59 +182,58 @@
       <div id="fbpage-container">
         <p>Why not check us out on Facebook:</p>
         <div class="fb-page" data-href="https://www.facebook.com/thelittlegreenlarder/" data-tabs="timeline, events, messages" data-width="340" data-height="500" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false"
-          data-show-facepile="true">
-          <blockquote cite="https://www.facebook.com/thelittlegreenlarder/" class="fb-xfbml-parse-ignore">
-            <a href="https://www.facebook.com/thelittlegreenlarder/">The Little Green Larder</a>
-          </blockquote>
-        </div>
+        data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/thelittlegreenlarder/" class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/thelittlegreenlarder/">The Little Green Larder</a>
+        </blockquote>
       </div>
-      <!-- map API to show the shops location -->
-      <div id="map-container">
+    </div>
+    <!-- map API to show the shops location -->
+    <div id="map-container">
       <p>Here's where you can find us:</p>
-        <div id='map' style='width: 340px; height: 300px;'></div>
-        <script>
-          mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dC1iYWluIiwiYSI6ImNrM2VydjduZzAxYW8zb2w2YWpzMHVjeXEifQ.TeD601FJ2Yxys-IIWzPKrQ';
-          var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11',
-            center: [-2.992283, 56.455914],
-            zoom: 15
-          });
+      <div id='map' style='width: 340px; height: 300px;'></div>
+      <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dC1iYWluIiwiYSI6ImNrM2VydjduZzAxYW8zb2w2YWpzMHVjeXEifQ.TeD601FJ2Yxys-IIWzPKrQ';
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-2.992283, 56.455914],
+        zoom: 15
+      });
 
-          map.on('load', function() {
-            map.loadImage('https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/60355888_380648815992528_3498095749848104960_n.jpg?_nc_cat=100&_nc_ohc=4O7miOAMXdwAQnMp4MVugAFlvxy5jG0bMjE6WXa3bs0V7MqnqIKkDKeHQ&_nc_ht=scontent-lhr3-1.xx&oh=adcaee31c50e978fdb793ebb4c8ca2e9&oe=5E846749',
-            function(error, image) {
-              if (error) throw error;
-              map.addImage('logo', image);
-              map.addLayer({
-                "id": "points",
-                "type": "symbol",
-                "source": {
-                  "type": "geojson",
-                  "data": {
-                    "type": "FeatureCollection",
-                    "features": [{
-                      "type": "Feature",
-                      "geometry": {
-                        "type": "Point",
-                        "coordinates": [-2.992283, 56.455914]
-                      }
-                    }]
+      map.on('load', function() {
+        map.loadImage('https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/60355888_380648815992528_3498095749848104960_n.jpg?_nc_cat=100&_nc_ohc=4O7miOAMXdwAQnMp4MVugAFlvxy5jG0bMjE6WXa3bs0V7MqnqIKkDKeHQ&_nc_ht=scontent-lhr3-1.xx&oh=adcaee31c50e978fdb793ebb4c8ca2e9&oe=5E846749',
+        function(error, image) {
+          if (error) throw error;
+          map.addImage('logo', image);
+          map.addLayer({
+            "id": "points",
+            "type": "symbol",
+            "source": {
+              "type": "geojson",
+              "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-2.992283, 56.455914]
                   }
-                },
-                "layout": {
-                  "icon-image": "logo",
-                  "icon-size": 0.07
-                }
-              });
-            });
+                }]
+              }
+            },
+            "layout": {
+              "icon-image": "logo",
+              "icon-size": 0.07
+            }
           });
-        </script>
-      </div>
-    </ons-page>
-  </template>
-
-
-  <script type="text/javascript" src="code/onsen.js"></script>
+        });
+      });
+      </script>
+    </div>
+  </ons-page>
+</template>
+<script src="code/statistics.js"></script>
+<script type="text/javascript" src="code/onsen.js"></script>
 </body>
 </html>
