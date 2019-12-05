@@ -67,6 +67,18 @@ function showResult() {
 		document.getElementById('checklist-item-'+(9+1)).innerHTML = "Dundee produces a total of 23400000kg of food waste per year. Putting this into an appropriate wastage bin would prevent a huge amount of carbon dioxide pollution per year";
 	}
 
+	if (checklist[10]) {
+		document.getElementById('checklist-item-'+(10+1)).innerHTML = "Dundee uses 3250000 plastic bags per year, if we reused our bags this would greatly reduced.";
+	}
+
+	if (checklist[11]) {
+		document.getElementById('checklist-item-'+(11+1)).innerHTML = "If we recycled all of our post, we would greatly reduce our paper wastage which would result in many trees being prevented from getting cut down";
+	}
+
+	if (checklist[12]) {
+		document.getElementById('checklist-item-'+(12+1)).innerHTML = "If your recycling bin is put out for collection containing a fair amount of wrong items, it will not be emptied. This is to prevent the contamination of the whole vehicle load, which could result in it being rejected for recycling and diverted to landfill.";
+	}
+
 }
 
 var run = true;
