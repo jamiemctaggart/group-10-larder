@@ -23,3 +23,15 @@ h1{
   height: 300px;
   margin: auto;
 }
+
+#chart_wrap {
+
+
+}
+
+#piechart {
+  width: 70%;
+  height: 600px;
+  margin: auto;
+
+}

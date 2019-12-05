@@ -49,3 +49,13 @@ function toggleCheck(change) {
 		badChoices++;
 	}
 }
+
+$(window).on("throttledresize", function (event) {
+    var options = {
+        width: '100%',
+        height: '100%'
+    };
+
+    var data = google.visualization.arrayToDataTable([]);
+    drawChart(data, options);
+});
