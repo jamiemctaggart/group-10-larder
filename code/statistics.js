@@ -2,7 +2,7 @@ google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
 
-var checklist = [false, false, false, false, false, false, false, false, false, false,false,false,false];
+var checklist = [false, false, false, false, false, false, false, false, false, false, false, false, false];
 var greenChoices = 0;
 var badChoices = 13;
 
