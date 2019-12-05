@@ -35,3 +35,10 @@ h1{
   margin: auto;
 
 }
+
+@media only screen and (max-width: 600px) {
+#piechart{
+  width: 100%;
+  height: 200px;
+}
+}
