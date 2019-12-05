@@ -7,10 +7,48 @@
 body {
   /* max-width: 960px; */
   margin: 0 auto;
+  color: white;
 }
 
 h1{
   text-align: center;
+}
+
+p{
+  color: white;
+}
+.tabbar{
+  background-color: #149911;
+}
+
+.center.list-item__center{
+  color: white;
+}
+.tabbar{
+  color: white;
+}
+
+.toolbar{
+  background-color: #149911;
+
+}
+.page{
+  background-color: green;
+}
+
+.page__background{
+  background-color: #0B5D1E;
+}
+
+.list{
+  background-color: #0B5D1E;
+}
+
+.tabbar__button{
+  color: white;
+}
+.center.toolbar__center.toolbar__title{
+  color: white;
 }
 
 #fbpage-container{
