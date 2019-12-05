@@ -47,6 +47,18 @@ function showResult() {
 		document.getElementById('checklist-item-'+(4+1)).innerHTML = "Many non-biodegradable products are thrown in landfills when not recycled. This results in pollution, water contamination or other environmental issues.";
 	}
 
+	if (checklist[5]) {
+		document.getElementById('checklist-item-'+(5+1)).innerHTML = "If everyone in Dundee used reusable straws, we would save 225000 straws a year.";
+	}
+
+	if (checklist[6]) {
+		document.getElementById('checklist-item-'+(6+1)).innerHTML = "Plastic shower gel bottles create unnecessary waste that can be avoided by using bars of soap as a replacement.";
+	}
+
+	if (checklist[7]) {
+		document.getElementById('checklist-item-'+(7+1)).innerHTML = "If everyone in Dundee used reusable straws, we would save 225000 straws a year.";
+	}
+
 }
 
 var run = true;
