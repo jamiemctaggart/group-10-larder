@@ -6,9 +6,9 @@
   "orientation": "portrait",
   "theme_color": "#0B5D1E",
   "background_color": "#0B5D1E",
-  "start_url": "/",
+  "start_url": "/index.html",
   "icons": [{
-    "src": "images/leaf.png",
+    "src": "icons/leaf.png",
     "sizes": "512x512"
   }]
 }
