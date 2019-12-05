@@ -44,7 +44,7 @@ function showResult() {
 	}
 
 	if (checklist[4]) {
-		document.getElementById('checklist-item-'+(4+1)).innerHTML = "";
+		document.getElementById('checklist-item-'+(4+1)).innerHTML = "Many non-biodegradable products are thrown in landfills when not recycled. This results in pollution, water contamination or other environmental issues.";
 	}
 
 }
