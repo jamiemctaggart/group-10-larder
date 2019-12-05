@@ -14,7 +14,8 @@ function drawChart() {
 		['Wastefulness', badChoices]
 	]);
 	var options = {
-		title: 'Eco Score'
+		title: 'Eco Score',
+		backgroundColor: 'transparent'
 	};
 	var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 	chart.draw(data, options);
