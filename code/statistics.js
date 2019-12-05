@@ -2,9 +2,9 @@ google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
 
-var checklist = [false, false, false, false, false, false, false, false, false, false];
+var checklist = [false, false, false, false, false, false, false, false, false, false, false, false, false];
 var greenChoices = 0;
-var badChoices = 10;
+var badChoices = 13;
 
 
 function drawChart() {
@@ -14,7 +14,8 @@ function drawChart() {
 		['Wastefulness', badChoices]
 	]);
 	var options = {
-		title: 'Eco Score'
+		title: 'Eco Score',
+		backgroundColor: 'transparent'
 	};
 	var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 	chart.draw(data, options);
@@ -96,6 +97,7 @@ function toggleCheck(change) {
 		greenChoices--;
 		badChoices++;
 	}
+	showResult();
 }
 
 $(window).on("throttledresize", function (event) {

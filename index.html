@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <link rel="manifest" href="manifest.json">
+
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
@@ -9,6 +12,21 @@
   <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="css/master.css">
   <meta charset="UTF-8">
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
+
 </head>
 <body>
   <div id="fb-root"></div>
@@ -116,7 +134,7 @@
             Use food waste bin
           </label>
         </ons-list-item>
-        <ons-list-item tappable>
+        <ons-list-item onclick="toggleCheck(10);" tappable>
           <label class="left">
             <ons-checkbox input-id="check-11"></ons-checkbox>
           </label>
@@ -124,7 +142,7 @@
             Reuse plastic shopping bags
           </label>
         </ons-list-item>
-        <ons-list-item tappable>
+        <ons-list-item onclick="toggleCheck(11);" tappable>
           <label class="left">
             <ons-checkbox input-id="check-12"></ons-checkbox>
           </label>
@@ -132,7 +150,7 @@
             Recycle mail and post that isn't needed
           </label>
         </ons-list-item>
-        <ons-list-item tappable>
+        <ons-list-item onclick="toggleCheck(12);" tappable>
           <label class="left">
             <ons-checkbox input-id="check-13"></ons-checkbox>
           </label>
@@ -152,6 +170,7 @@
         same items off the list
       </p>
       <!-- Jamie is working on the javascript for this -->
+
       <ons-button onclick="showResult();" modifier="large" ripple="true">Calculate Savings</ons-button>
       <div id="chart_wrap">
         <div id="piechart"></div>

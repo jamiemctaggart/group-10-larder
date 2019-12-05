@@ -1,0 +1,14 @@
+{
+  "name": "Little Green List",
+  "short_name": "LGL",
+  "description": "This app will help you live a zero-waste lifestyle.",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "theme_color": "#0B5D1E",
+  "background_color": "#0B5D1E",
+  "start_url": "/index.html",
+  "icons": [{
+    "src": "icons/leaf.png",
+    "sizes": "512x512"
+  }]
+}
