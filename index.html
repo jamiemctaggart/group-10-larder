@@ -3,6 +3,9 @@
 <head>
 
   <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/leaf.png">
+  <link rel="apple-touch-startup-image" href="icons/leaf.png">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
@@ -169,9 +172,7 @@
         This is the statistics if everyone in dundee was able to check those
         same items off the list
       </p>
-      <!-- Jamie is working on the javascript for this -->
 
-      <ons-button onclick="showResult();" modifier="large" ripple="true">Calculate Savings</ons-button>
       <div id="chart_wrap">
         <div id="piechart"></div>
       <!-- These items are accesed through statistics.js and will show facts-->
