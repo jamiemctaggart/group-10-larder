@@ -48,4 +48,5 @@ function toggleCheck(change) {
 		greenChoices--;
 		badChoices++;
 	}
+	showResult();
 }
