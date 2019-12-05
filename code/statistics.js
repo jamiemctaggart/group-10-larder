@@ -59,6 +59,14 @@ function showResult() {
 		document.getElementById('checklist-item-'+(7+1)).innerHTML = "If wasted food was a country, it would be the third largest producer of carbon dioxide in the world, after the United States and China";
 	}
 
+	if (checklist[8]) {
+		document.getElementById('checklist-item-'+(8+1)).innerHTML = "Cooking your own food means you know all the ingredients that are going into it, this ensures that you know they are from a sustainable source.";
+	}
+
+	if (checklist[7]) {
+		document.getElementById('checklist-item-'+(7+1)).innerHTML = "If wasted food was a country, it would be the third largest producer of carbon dioxide in the world, after the United States and China";
+	}
+
 }
 
 var run = true;
