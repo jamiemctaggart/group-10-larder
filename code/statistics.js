@@ -56,7 +56,7 @@ function showResult() {
 	}
 
 	if (checklist[7]) {
-		document.getElementById('checklist-item-'+(7+1)).innerHTML = "If everyone in Dundee used reusable straws, we would save 225000 straws a year.";
+		document.getElementById('checklist-item-'+(7+1)).innerHTML = "If wasted food was a country, it would be the third largest producer of carbon dioxide in the world, after the United States and China";
 	}
 
 }
