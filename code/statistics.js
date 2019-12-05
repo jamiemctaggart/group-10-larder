@@ -39,6 +39,13 @@ function showResult() {
 		" plastic toothbrushes per year, as plastic toothbrushes can't biodegrade, and require petrolium to be made";
 	}
 
+	if (checklist[3]) {
+		document.getElementById('checklist-item-'+(3+1)).innerHTML = "Bamboo is technically a grass and can be cut without killing the plant. When you move grass it doesn’t die – it continues to grow. This makes bamboo a highly renewable, eco-friendly resource";
+	}
+
+	if (checklist[4]) {
+		document.getElementById('checklist-item-'+(4+1)).innerHTML = "";
+	}
 
 }
 
